@@ -6,5 +6,5 @@
 
         - Map, Unorderead_map e Multmap;
         - Function;
-        - Set e Unordered_set;
+        - Set, Unordered_set, multset;
         - Unique_ptr e Shared_ptr;

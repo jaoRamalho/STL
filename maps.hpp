@@ -1,4 +1,4 @@
-/*------------------------- MAP, UNORDERED_MAP E MULTMAP ------------------------------------------
+/*---------------------- MAP, UNORDERED_MAP, MULTMAP E UNORDERED MULTMAP ------------------------------------------
     (Link para a referencia da microsoft) -
         unordered_map - https://learn.microsoft.com/pt-br/cpp/standard-library/unordered-map?view=msvc-170
         multmap - https://learn.microsoft.com/pt-br/cpp/standard-library/multimap-class?view=msvc-170
@@ -29,7 +29,8 @@ int main(){
     unordered_map<int, string> uMap;
     map<int, string> map;
     multimap<int, string> mMap;
-    
+    unordered_multimap<int, string> uMMap;
+
     //no map e umap pode inserir usando o operador "[]", igual um vetor o multmap não tem esse operador sobrecarregado
     map[1] = "Um";
     uMap[1] = "Um";
@@ -38,11 +39,13 @@ int main(){
     map.insert(pair<int, string>(2, "Dois"));
     uMap.insert(pair<int, string>(2, "Dois"));
     mMap.insert(pair<int, string>(2, "Dois"));
+    uMMap.insert(pair<int, string>(2, "Dois"));
 
     //para remover chaves 
     map.erase(1);
     uMap.erase(1);
     mMap.erase(1);
+    uMMap.erase(1);
 
     //para retornar os valores da representados pela chave
     cout << map[1] << endl;
@@ -52,5 +55,5 @@ int main(){
     cout << map.find(1)->second << endl;
     cout << uMap.find(1)->second << endl;
     cout << mMap.find(1)->second << endl;
-
+    cout << uMMap.find(1)->second << endl;
 }
