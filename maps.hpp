@@ -67,13 +67,22 @@ int main(){
     mMap.erase(1);
     uMMap.erase(1);
 
+
     //para retornar os valores da representados pela chave (MAP E UNORDERED_MAP)
     cout << map[1] << endl;
     cout << uMap[1] << endl;
+    
 
-    //para retornar os valores representados pela chave (TODOS)
+    //find serve para retornar o par chave e valor(TODOS)
     cout << map.find(1)->second << endl;
     cout << uMap.find(1)->second << endl;
     cout << mMap.find(1)->second << endl;
     cout << uMMap.find(1)->second << endl;
+    
+    cout << map.at(1) << endl;
+    cout << uMap.at(1) << endl;
+
+    /*obbs: A principal diferenca entre map.find(key) e map.at(key) é que vc só usa o at se tiver 
+            certeza que a chave existe, já o find retorna um iterator que pode ser usado para verificar
+            se a chave existe ou não. (para verificar é só comparar se o iterador é igual ao map.end())*/
 }
