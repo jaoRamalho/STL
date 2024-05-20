@@ -14,21 +14,25 @@
             - Map classico (map):
                 - Cada chave possui apenas um valor associado.
                 - Ela é organizada no formato de arvore red-black.
+                - Mantem os elementos ordenados (ordem de inserção).
                 - Tempo de busca, incerção e remoção é de O(log(n)); (Para fins de comparacão o vector de o tempo de busca de O(n)).
 
             - Multmap classico (multmap):
                 - Cada chave pode ter um ou mais valores associados.
                 - Ela é organizada no formato de arvore red-black.
+                - Mantem os elementos ordenados (ordem de inserção).
                 - Tempo de busca, incerção e remoção é de O(log(n));
 
             - Map não ordenado (unordered_map):
                 - Cada chave possui apenas um valor associado;
                 - Ela é organizada no formato de tabela hash;
+                - Não mantem os elementos ordenados.
                 - Tempo de busca, incerção e remoção é de O(1); (Tempo constante);
             
             - Multmapa não ordenado (unordered_map):
                 - Cada chave pode ter um ou mais valores associados;
                 - Ela é organizada no formato de tabela hash;
+                - Não mantem os elementos ordenados.
                 - Tempo de busca, incerção e remoção é de O(1); (Tempo constante); 
             
 
