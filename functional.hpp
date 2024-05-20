@@ -108,6 +108,12 @@ std::function<void(void)> funcao3(int estado, std::vector<int> vetor3pos){
 class Entidade{ 
     public:
         Entidade(){} 
+        std::string getTipo() { 
+            int n = rand()%3;
+            if(n == 0) return "Jogador";
+            else if (n == 1) return "Projetil";
+            else return "Inimigo";
+        }
 };
 
 void funcao4(){
@@ -123,8 +129,8 @@ void funcao4(){
     mapColisoes["Projetil e Inimigo"] = [](Entidade* proj, Entidade* ini) { std::cout << "Colisao pi" << std::endl; };
     mapColisoes["Projetil e Jogador"] = [](Entidade* proj, Entidade* jog) { std::cout << "Colisao pj" << std::endl; };
 
-    Entidade projetil, inimigo;
-    std::string tipo_de_colisao = "Projetil e Inimigo"; //tipo de colisao aleatória;
-    mapColisoes[tipo_de_colisao](&projetil, &inimigo); //em vez de fazer um bloco de if's para achar a colisao apenas boto no map; 
+    Entidade ent1, ent2;
+    std::string tipo_de_colisao =  ent1.getTipo() + " e " + ent2.getTipo(); //tipo de colisao aleatória;
+    mapColisoes[tipo_de_colisao](&ent1, &ent2); //em vez de fazer um bloco de if's para achar a colisao apenas boto no map; 
 };
 //------------------------------------------------------------------------------------------------------
