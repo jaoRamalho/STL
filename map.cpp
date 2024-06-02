@@ -77,11 +77,17 @@ int main(){
     cout << uMap[1] << endl;
     
 
-    //find serve para retornar o par chave e valor(TODOS)
+    //find serve para retornar o iterador de par chave e valor(TODOS) para a primeira vez que ocorre a chave
     cout << map.find(1)->second << endl;
     cout << uMap.find(1)->second << endl;
     cout << mMap.find(1)->second << endl;
     cout << uMMap.find(1)->second << endl;
+
+    //equal_range retorna um pair de iteradores que representam o intervalo de elementos com a chave especificada (TODOS)
+    auto range = mMap.equal_range(2);
+    for (auto it = range.first; it != range.second; ++it){
+        cout << it->second << endl;
+    }
     
     cout << map.at(1) << endl;
     cout << uMap.at(1) << endl;
